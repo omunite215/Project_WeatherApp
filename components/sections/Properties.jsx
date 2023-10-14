@@ -1,17 +1,33 @@
 import React from 'react'
 import PropertiesCard from '../PropertiesCard'
 
+function convertToAMPM(timestamp) {
+  // Create a new Date object using the timestamp in milliseconds
+  var date = new Date(timestamp * 1000);
+  
+  // Extract hours, minutes, and AM/PM indicator
+  var hours = date.getHours() % 12;
+  var minutes = "0" + date.getMinutes();
+  var ampm = hours >= 12 ? 'PM' : 'AM';
+  
+  // Format the time in AM/PM format
+  var formattedTime = hours + ':' + minutes.slice(-2) + ' ' + ampm;
+  
+  return formattedTime;
+}
+
 const Properties = ({sunrise, sunset, wind, humidity, feelsLike, visibility}) => {
+
   let PropertiesProps = [
     {
       imgSrc: "../Properties/sunrise.svg",
       title: "Sunrise",
-      value: sunrise
+      value: `${convertToAMPM(sunrise)}`
     },
     {
       imgSrc: "../Properties/sunset.svg",
       title: "Sunset",
-      value: sunset
+      value: `${convertToAMPM(sunset)}`
     },
     {
       imgSrc: "../Properties/wind.svg",
@@ -26,7 +42,7 @@ const Properties = ({sunrise, sunset, wind, humidity, feelsLike, visibility}) =>
     {
       imgSrc: "../Properties/feels.svg",
       title: "Feels Like",
-      value: feelsLike
+      value: `${feelsLike} °C`
     },
     {
       imgSrc: "../Properties/visibility.svg",

@@ -82,6 +82,9 @@
   .heading-Text{
     @apply font-semibold tracking-wide sm:text-3xl text-2xl;
   }
+  .hero-Subtext{
+    @apply sm:text-2xl text-xl;
+  }
   .hero-Text-Bg{
     @apply bg-gray-400 dark:bg-slate-700 rounded-lg p-3 bg-clip-padding dark:bg-clip-padding backdrop-filter dark:backdrop-filter backdrop-blur-sm dark:backdrop-blur-sm bg-opacity-10 dark:bg-opacity-10;
   }

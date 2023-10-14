@@ -66,12 +66,12 @@ const Hero = ({ temp, location, temp_description, dt, timezone }) => {
     <section className={`flex flex-col items-end ${imgString} bg-cover bg-center bg-no-repeat rounded-xl pt-[20%] w-full`}>
       <section className="w-full p-6 flex justify-between md:flex-row flex-col font-semibold">
         <div className="flex flex-col gap-2 hero-Text-Bg">
-          <h1 className=" text-7xl">{temp} °C</h1>
-          <h2 className=" text-3xl">{location}</h2>
+          <h1 className=" sm:text-7xl text-3xl">{temp} °C</h1>
+          <h2 className=" sm:text-3xl text-2xl">{location}</h2>
         </div>
         <div className="flex flex-col gap-2 justify-end mt-auto h-1/2 hero-Text-Bg">
-          <h3 className="text-2xl">{time}</h3>
-          <h3 className="text-2xl">{temp_description}, {day}</h3>
+          <h3 className="hero-Subtext">{time}</h3>
+          <h3 className="hero-Subtext">{temp_description}, {day}</h3>
         </div>
       </section>
     </section>
