@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "framer-motion";
 require('dotenv').config();
 import axios from "axios";
 import Image from "next/image";
@@ -8,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Hero, Properties, Forecast } from "@/components/sections";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
+import { navVariants } from "@/utils/motion";
 
 export default function Home() {
   const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
@@ -62,13 +64,13 @@ export default function Home() {
     <main className=" font-poppins w-full overflow-hidden">
       {/* Navbar */}
       <header className="padding-x flex-Center">
-        <nav className="boxWidth">
+        <motion.nav className="boxWidth" variants={navVariants} initial="hidden" whileInView="show">
           <section className="w-full flex-Between py-6">
-            <div className="flex-Start gap-3">
+            <div className="flex-Start sm:gap-3 sm:flex-row flex-col">
               <Image src="../logo.svg" width={72} height={72} alt="logo-icon" />
               <ModeToggle />
             </div>
-            <div action="" className="flex-End gap-3">
+            <div action="" className="flex-End gap-3 sm:flex-row flex-col">
               <Input
                 type="text"
                 placeholder="Search Location..."
@@ -79,13 +81,13 @@ export default function Home() {
               <Button onClick={handleSearch}>Search</Button>
             </div>
           </section>
-        </nav>
+        </motion.nav>
       </header>
       {/* Hero */}
       <section className="flex justify-center items-start">
         <section className="boxWidth">
         {loading ? (
-            <Skeleton />
+            <Skeleton className="h-full w-full" />
           ) : (
             <Hero
               temp={weatherData?.main.temp}
@@ -102,7 +104,7 @@ export default function Home() {
         <section className="boxWidth">
         <div className="flex-Between md:flex-row flex-col w-full">
           {loading ? (
-            <Skeleton />
+            <Skeleton className="h-full w-full" />
           ) : (
             <Properties
               sunrise={weatherData?.sys.sunrise}
@@ -113,7 +115,7 @@ export default function Home() {
               visibility={weatherData?.visibility}
             />
           )}
-          {loading ? <Skeleton /> : <Forecast data={forecastData} />}
+          {loading ? <Skeleton className="h-full w-full" /> : <Forecast data={forecastData} />}
         </div>
         </section>
       </section>

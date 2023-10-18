@@ -77,7 +77,7 @@
     @apply flex justify-start items-center;
   }
   .flex-End{
-    @apply flex justify-end items-center;
+    @apply flex sm:justify-end justify-start sm:items-center items-start;
   }
   .heading-Text{
     @apply font-semibold tracking-wide sm:text-3xl text-2xl;

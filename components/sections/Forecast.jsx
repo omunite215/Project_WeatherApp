@@ -1,11 +1,12 @@
-import React from "react";
+import { motion } from "framer-motion";
 import ForecastCard from "../ForecastCard";
+import { slideIn } from "@/utils/motion";
 
 const Forecast = ({data}) => {
   
 
   return (
-    <section className="flex flex-col gap-3 p-6 sm:w-3/4 w-full">
+    <motion.div className="flex flex-col gap-3 p-6 sm:w-3/4 w-full" variants={slideIn('right', 'tween', 0.2, 1)}>
       <h1 className=" heading-Text pl-4">5 Days Forecast</h1>
       <div className="w-full flex flex-col px-6 py-8 gap-2 max-h-[325px] overflow-y-scroll">
         {data?.list.map((item, index) => (
@@ -17,7 +18,7 @@ const Forecast = ({data}) => {
           />
         ))}
       </div>
-    </section>
+    </motion.div>
   );
 };
 
