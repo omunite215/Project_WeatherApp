@@ -26,7 +26,13 @@ const Properties = ({
   visibility,
 }) => {
   return (
-    <motion.div className=" grid sm:grid-cols-2 grid-cols-1 gap-y-3 gap-x-10 py-6 sm:w-1/2 w-full" variants={slideIn('left', 'tween', 0.2, 1)} >
+    <motion.div
+      className=" grid sm:grid-cols-2 grid-cols-1 gap-y-3 gap-x-10 py-6 sm:w-1/2 w-full"
+      initial={{ opacity: 0, x: -100 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: 100 }}
+      transition={{ duration: 0.5 }}
+    >
       <PropertiesCard
         title="Sunrise"
         imgSrc="../Properties/sunrise.svg"
