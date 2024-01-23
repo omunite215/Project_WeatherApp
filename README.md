@@ -3,8 +3,6 @@
 ![image](https://github.com/omunite215/Weather-App/assets/78680563/c451091b-dc6f-4251-85ea-757c431c1fe1)
 ![image](https://github.com/omunite215/Weather-App/assets/78680563/62a0c521-7af3-4cca-b7c1-4c36766176bf)
 
-
-
 ### Link to Figma File:
 
 <p align="left">
@@ -33,7 +31,6 @@ Before you start, make sure you have the following software installed on your co
 
 [![My Skills](https://skillicons.dev/icons?i=nodejs)](https://skillicons.dev)
 
-
 ## ℹ️ How to use this Repository?
 
 1. Clone the repository to your local machine
@@ -42,17 +39,21 @@ Before you start, make sure you have the following software installed on your co
   git clone https://github.com/omunite215/Weather-App.git
 
 ```
+
 2. Navigate to the project directory
 
 ```bash
   cd Weather-App
 ```
+
 3. Install the necessary dependencies
+
 ```bash
   pnpm install
 ```
 
 4. Start the development server
+
 ```bash
   pnpm run dev
 ```
@@ -68,36 +69,21 @@ The website should now be up and running on http://localhost:3000.
 [![My Skills](https://skillicons.dev/icons?i=html,css,js,react,nextjs)](https://skillicons.dev)
 
 ## 🚀 About Me
+
 Specializations:
+
 - UI/UX Design.
 - Web Development
 
 ## 🙋‍♂️ Connect With Me
 
-<p align="left">
-  <a href="https://skillicons.dev">
-    <a href="https://github.com/omunite215">
-      <img src="https://skillicons.dev/icons?i=github" />
-    </a>
-  </a>
-   <a href="https://skillicons.dev">
-    <a href="https://www.linkedin.com/in/om-patel-401068143/">
-      <img src="https://skillicons.dev/icons?i=linkedin" />
-    </a>
-  </a>
-  <a href="https://skillicons.dev">
-    <a href="https://www.instagram.com/_21omp/">
-      <img src="https://skillicons.dev/icons?i=instagram" />
-    </a>
-  </a>
-   <a href="https://skillicons.dev">
-    <a href="https://portfoliobyom.netlify.app/">
-      <img src="https://skillicons.dev/icons?i=devto" />
-    </a>
-  </a>
-</p>
+[<img src="https://skillicons.dev/icons?i=github" />](https://github.com/omunite215)&nbsp;
+[<img src="https://skillicons.dev/icons?i=linkedin" />](https://www.linkedin.com/in/om-patel-401068143/)&nbsp;
+[<img src="https://skillicons.dev/icons?i=instagram" />](https://www.instagram.com/_21omp/)&nbsp;
+[<img src="https://skillicons.dev/icons?i=devto" />](https://portfolio-jade-gamma-13.vercel.app/)
 
 ## 🗒️ Authors
+
 - Om Patel
 
 <p align="left">
@@ -109,12 +95,11 @@ Specializations:
 </p>
 
 ## Acknowledgements
+
 - [TypeScript Docs](https://www.typescriptlang.org/)
 - [Tailwind Docs](https://tailwindcss.com/docs/installation)
 - [React Docs](https://react.dev/)
 
-
 <p align="center">
   <img src="https://github.com/omunite215/Weather-App/assets/78680563/5b77b1c8-a79f-47ef-a421-4cecb51153a8" alt="Om's Logo Image"/>
 </p>
-

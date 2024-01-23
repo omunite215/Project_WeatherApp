@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
 
 @layer base {
   :root {
@@ -26,7 +25,7 @@
     --ring: 142.1 76.2% 36.3%;
     --radius: 0.75rem;
   }
- 
+
   .dark {
     --background: 20 14.3% 4.1%;
     --foreground: 0 0% 95%;
@@ -50,7 +49,6 @@
   }
 }
 
- 
 @layer base {
   * {
     @apply border-border;
@@ -58,40 +56,21 @@
   body {
     @apply bg-background text-foreground;
   }
-}
-
-@layer utilities {
-  .padding-x{
-    @apply sm:px-16 px-6;
+  .padding-x {
+    @apply sm:px-16 px-0;
   }
-  .boxWidth{
-    @apply max-w-[1280px] w-full;
-  }
-  .flex-Center{
-    @apply flex justify-center items-center;
-  }
-  .flex-Between{
+  .flexBetween {
     @apply flex justify-between items-center;
   }
-  .flex-Start{
-    @apply flex justify-start items-center;
-  }
-  .flex-End{
+  .flexEnd {
     @apply flex justify-end items-center;
   }
-  .heading-Text{
-    @apply font-semibold tracking-wide sm:text-3xl text-2xl;
+  .hero-Subtext {
+    @apply sm:text-2xl md:text-lg text-base font-semibold;
   }
-  .hero-Subtext{
-    @apply sm:text-2xl text-xl;
+  .hero-Text-Bg {
+    @apply shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[7.9px] border p-3 rounded-2xl border-solid border-[rgba(150,146,146,0.3)];
+    background: rgba(150, 146, 146, 0.33);
+    backdrop-filter: blur(7.9px);
   }
-  .hero-Text-Bg{
-    @apply bg-gray-400 dark:bg-slate-700 rounded-lg p-3 bg-clip-padding dark:bg-clip-padding backdrop-filter dark:backdrop-filter backdrop-blur-sm dark:backdrop-blur-sm bg-opacity-10 dark:bg-opacity-10;
-  }
-  .Forecast-Card-Text{
-    @apply text-base font-medium;
-  }
-  .Properties-Card-Text{
-    @apply sm:text-2xl text-xl;
-  }
-  }
+}
