@@ -8,6 +8,9 @@ const Hero = ({ data }: { data: WeatherResponse | null }) => {
 
   if (data) {
     description = data.weather[0].main.toLowerCase();
+    if (description === "haze") {
+      description = "smoke";
+    }
     [day, time] = findTime(data.dt, data.timezone);
   }
 
