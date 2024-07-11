@@ -11,6 +11,9 @@ const Hero = ({ data }: { data: WeatherResponse | null }) => {
     if (description === "haze") {
       description = "smoke";
     }
+    if (description === "mist") {
+      description = "fog";
+    }
     [day, time] = findTime(data.dt, data.timezone);
   }
 
