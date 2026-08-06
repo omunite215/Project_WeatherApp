@@ -20,31 +20,31 @@ const BANDS: Record<AirQualityIndex, AirQualityBand> = {
     index: 1,
     label: "Good",
     colorVar: "var(--aqi-1)",
-    advice: "Air quality is ideal for outdoor activity.",
+    advice: "Ideal for outdoor activity",
   },
   2: {
     index: 2,
     label: "Fair",
     colorVar: "var(--aqi-2)",
-    advice: "Acceptable, though unusually sensitive people may notice symptoms.",
+    advice: "Acceptable for most people",
   },
   3: {
     index: 3,
     label: "Moderate",
     colorVar: "var(--aqi-3)",
-    advice: "Sensitive groups should limit prolonged exertion outdoors.",
+    advice: "Sensitive groups take care",
   },
   4: {
     index: 4,
     label: "Poor",
     colorVar: "var(--aqi-4)",
-    advice: "Reduce prolonged outdoor exertion.",
+    advice: "Limit outdoor exertion",
   },
   5: {
     index: 5,
     label: "Very Poor",
     colorVar: "var(--aqi-5)",
-    advice: "Avoid outdoor exertion where possible.",
+    advice: "Avoid outdoor exertion",
   },
 };
 

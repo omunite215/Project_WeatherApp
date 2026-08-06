@@ -50,9 +50,10 @@ export function MetricTile({
       <div className="min-w-0">
         <p className="text-xs text-muted-foreground sm:text-sm">{label}</p>
         <p className="truncate font-semibold xl:text-lg">{value}</p>
-        {/* Advice copy is the first thing to go when the tile is narrow. */}
+        {/* Wraps to two lines rather than truncating: the tile has the vertical
+            room, and a clipped half-sentence reads as broken. */}
         {detail && (
-          <p className="hidden truncate text-xs text-muted-foreground sm:block">
+          <p className="hidden text-xs leading-snug text-muted-foreground sm:line-clamp-2">
             {detail}
           </p>
         )}

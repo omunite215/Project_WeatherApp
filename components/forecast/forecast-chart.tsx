@@ -131,9 +131,11 @@ export function ForecastChart({
       className={cn("w-full text-[11px] sm:text-xs xl:text-sm", CHART_HEIGHT)}
     >
       <ResponsiveContainer width="100%" height="100%">
+        {/* No negative left margin: it clips the y-axis tick labels, leaving
+            the unit suffix visible and the number cut off. */}
         <AreaChart
           data={points}
-          margin={{ top: 8, right: 8, left: -20, bottom: 0 }}
+          margin={{ top: 8, right: 12, left: 0, bottom: 0 }}
         >
           <defs>
             <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
@@ -159,7 +161,9 @@ export function ForecastChart({
           <YAxis
             tickLine={false}
             axisLine={false}
-            width={44}
+            // Wide enough for the longest label a metric can produce, e.g.
+            // "-10°C" or "100%".
+            width={56}
             tick={{ fill: "var(--muted-foreground)" }}
             tickFormatter={(value: number) => `${value}${unitLabel}`}
             domain={
