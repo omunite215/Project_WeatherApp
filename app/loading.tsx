@@ -1,21 +1,38 @@
+import { ForecastSkeleton } from "@/components/forecast/forecast-skeleton";
+import { HeroSkeleton } from "@/components/hero/hero-skeleton";
+import { MetricGridSkeleton } from "@/components/metrics/metric-grid-skeleton";
+import { RainCardSkeleton } from "@/components/metrics/rain-card";
 import { Skeleton } from "@/components/ui/skeleton";
+import { MAIN_GRID, PAGE_CONTAINER } from "@/lib/layout";
+import { cn } from "@/lib/utils";
 
-const loading = () => {
-  const repeatitions = [1, 2, 3, 4, 5, 6];
+/**
+ * Route-level loading UI.
+ *
+ * Reuses the same skeleton components and the same layout constants as the real
+ * page, so the shell shown here reflows at identical breakpoints and nothing
+ * shifts when the sections take over.
+ */
+export default function Loading() {
   return (
-    <div>
-      <Skeleton className="w-screen h-6" />
-      <Skeleton className="h-[50vh] w-screen" />
-      <section className="flexBetween lg:flex-row flex-col py-4 padding-x gap-y-6">
-        <div className="grid sm:grid-cols-2 grid-cols-1 gap-3">
-          {repeatitions.map((item) => (
-            <Skeleton className="w-6 h-6" key={item} />
-          ))}
-        </div>
-        <Skeleton className="h-72 2xl:w-[40rem] xl:w-[35rem] lg:w-[25rem] md:w-[20rem] rounded-md" />
-      </section>
-    </div>
-  );
-};
+    <main className={cn("padding-x pb-16 lg:pb-20", PAGE_CONTAINER)}>
+      <div className="flex flex-col gap-4 py-4 lg:gap-5 lg:py-5 xl:gap-6 xl:py-6">
+        <HeroSkeleton />
 
-export default loading;
+        <div className="flex items-center justify-between">
+          <Skeleton className="h-4 w-40" />
+          <Skeleton className="h-7 w-24" />
+        </div>
+
+        <div className={MAIN_GRID}>
+          <div className="flex flex-col gap-4 lg:gap-5 xl:gap-6">
+            <MetricGridSkeleton />
+            <RainCardSkeleton />
+          </div>
+
+          <ForecastSkeleton />
+        </div>
+      </div>
+    </main>
+  );
+}
